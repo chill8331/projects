@@ -4,29 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jQuery超酷3D网格照片墙动画特效|DEMO1_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
+    <title>jQuery超酷3D网格照片墙动画特效|DEMO3_jQuery之家-自由分享jQuery、html5、css3的插件库</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/default.css">
     <style type="text/css">
         /*Montserrat font*/
-        @import url(http://fonts.useso.com/css?family=Montserrat);
-        /*basic reset*/
-        * {margin: 0; padding: 0;}
-        body {text-align: center; /*overflow: hidden;*/}
+		@import url(http://fonts.useso.com/css?family=Montserrat);
+		/*basic reset*/
+		* {margin: 0; padding: 0;}
+		body {text-align: center;}
 
-        .grid {
-          width: 600px; height: 300px; margin: 100px auto 50px auto;
-          perspective: 500px; /*For 3d*/
-        }
-        .grid img {width: 60px; height: 60px; display: block; float: left;}
+		.grid {
+			width: 600px; height: 300px; margin: 100px auto 50px auto;
+			perspective: 500px; /*For 3d*/
+		}
+		.grid img {width: 50px; height: 50px; display: block; float: left; border-radius: 100%; margin: 5px;}
 
-        .animate {
-          font: 12px Montserrat; text-transform: uppercase;
-          background: rgb(0, 100, 0); color: white;
-          padding: 10px 20px; border-radius: 5px;
-          cursor: pointer;
-        }
-        .animate:hover {background: rgb(0, 75, 0);}
+		.animate {
+			font: 12px Montserrat; text-transform: uppercase;
+			background: rgb(0, 100, 0); color: white;
+			padding: 10px 20px; border-radius: 5px;
+			cursor: pointer;
+		}
+		.animate:hover {background: rgb(0, 75, 0);}
     </style>
     <!--[if IE]>
         <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
@@ -41,16 +41,15 @@
                 <a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="http://www.htmleaf.com/jQuery/Image-Effects/201510092648.html" title="返回下载页" target="_blank"><span> 返回下载页</span></a>
             </div>
             <div class="htmleaf-demo center">
-		  <a href="index.html" class="current">Default</a>
+		  <a href="index.html">Default</a>
 		  <a href="index2.html">Multiple Directions and Easings</a>
-		  <a href="index3.html">Circular Thumbnails 1</a>
+		  <a href="index3.html" class="current">Circular Thumbnails 1</a>
 		  <a href="index4.html">Circular Thumbnails 2</a>
 		</div>
         </header>
         <div class="htmleaf-content bgcolor-8">
-            <!-- a simple grid and an animate button -->
             <div class="grid"></div>
-            <span class="animate">Animate</span>
+		<span class="animate">Animate</span>
         </div>
         <footer class="related">
             <h3>如果你喜欢这个插件，那么你可能也喜欢:</h3>
@@ -110,7 +109,7 @@
 						//rotating the images on the Y axis from 360deg to 0deg
 						ry = (1-n)*360;
 						//translating the images from 1000px to 0px
-						tz = (1-n)*1000;
+						tz = (1-n)*200;
 						//applying the transformation
 						$(this).css("transform", "rotateY("+ry+"deg) translateZ("+tz+"px)");
 					}, 
